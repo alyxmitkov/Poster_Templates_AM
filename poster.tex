@@ -1,0 +1,125 @@
+\documentclass[final]{beamer}
+\usepackage[scale=1.0,size=a0,orientation=landscape]{beamerposter}
+\usepackage{graphicx,xcolor,booktabs}
+
+% Define UC Merced colors
+\definecolor{ucmercedblue}{RGB}{15,45,82}
+\definecolor{ucmercedgold}{RGB}{218,169,0}
+
+% Set color theme for blocks and structure
+\setbeamercolor{structure}{fg=ucmercedblue}
+\setbeamercolor{block title}{fg=white,bg=ucmercedblue}
+\setbeamercolor{block body}{fg=black,bg=white}
+\setbeamercolor{block title example}{fg=black,bg=ucmercedgold}
+\setbeamercolor{block body example}{fg=black,bg=white}
+\setbeamercolor{block title alerted}{fg=white,bg=ucmercedgold!85!black}
+\setbeamercolor{block body alerted}{fg=black,bg=white}
+
+\begin{document}
+
+% Calculate 3 column layout (3 columns + 4 gaps = full width)
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}   % 2.5% page width separators
+\setlength{\colwidth}{0.30\paperwidth}    % 30% page width per column
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+\begin{frame}[t]
+
+  % --- Top Banner ---
+  \begin{beamercolorbox}[wd=\paperwidth, colsep=0.5cm]{block title}
+    \begin{minipage}[c]{0.15\textwidth}
+      \includegraphics[height=8cm]{LeftLogo.eps}
+    \end{minipage}\hfill
+   \begin{minipage}[c]{0.7\textwidth}
+  \centering
+  {\Huge \textbf{\textcolor{ucmercedgold}{Quantum Control in Driven Many-Body Systems}}}\\[2ex]
+  {\LARGE \underline{Alyx Mitkov\textsuperscript{1}}, Lin Tian\textsuperscript{2}}\\[1ex]
+  {\large
+    \textsuperscript{1}Department of Chemistry and Biochemistry, University of California, Merced\\
+    \textsuperscript{2}Department of Physics, University of California, Merced\\
+    5200 North Lake Road, Merced, CA 95343, USA
+  }
+\end{minipage}
+\hfill
+    \begin{minipage}[c]{0.15\textwidth}
+      \flushright \includegraphics[height=8cm]{RightLogo.eps}
+    \end{minipage}
+  \end{beamercolorbox}
+
+  \vspace{1cm}  % space between banner and content
+
+  \begin{columns}[t]
+
+    \begin{column}{\colwidth}
+      \begin{block}{Introduction}
+        This is an introduction section. Provide some background or motivation for your project here. 
+        Keep the text concise and engaging so that readers quickly grasp the context.
+      \end{block}
+
+      \begin{block}{Methods}
+        Describe the methodology or approach. You can use bullet points for clarity:
+        \begin{itemize}
+          \item First, we did \textit{emphasis on procedure}.
+          \item Next, we implemented \textit{technique or analysis}.
+          \item Finally, we evaluated the outcomes.
+        \end{itemize}
+      \end{block}
+
+      \begin{exampleblock}{Case Study}
+        This example block highlights a specific case study or example result. 
+        Its header is gold to distinguish it from the regular sections.
+      \end{exampleblock}
+    \end{column}
+
+    \separatorcolumn
+
+    \begin{column}{\colwidth}
+      \begin{block}{Results}
+        Key results are presented here. For instance, you might include a figure (see Figure 1):
+        \begin{center}
+          \includegraphics[width=0.8\columnwidth]{SampleFigure.png}\\
+          {\small \textbf{Figure 1:} Caption describing the sample figure.}
+        \end{center}
+
+        You can also include a table (Table 1):
+        \begin{center}
+          \begin{tabular}{lrr}
+            \toprule
+            \textbf{Metric} & \textbf{Method A} & \textbf{Method B}\\
+            \midrule
+            Accuracy  & 85\% & 88\% \\
+            Precision & 80\% & 85\% \\
+            Recall    & 78\% & 82\% \\
+            \bottomrule
+          \end{tabular}\\
+          {\small \textbf{Table 1:} Performance comparison between Method A and Method B.}
+        \end{center}
+      \end{block}
+
+      \begin{alertblock}{Important Note}
+        This alert block can be used for important takeaways or critical information. 
+        Its header uses a darker gold with white text to attract attention. 
+      \end{alertblock}
+    \end{column}
+
+    \separatorcolumn
+
+    \begin{column}{\colwidth}
+      \begin{block}{Conclusion}
+        Summarize your conclusions here. Highlight the main points and the significance of your results. 
+        You might also mention future work or applications in a sentence or two.
+      \end{block}
+
+      \begin{block}{References}
+        \small  % smaller text for references
+        [1] A. Author et al. (2023). *Title of a relevant paper or source*. Journal/Conference.\\
+        [2] B. Author (2022). *Another reference title*. Publisher/Organization.\\
+        [3] C. Author & D. Author (2021). *Additional reference if needed*. Journal/Book.\\
+      \end{block}
+    \end{column}
+
+  \end{columns}
+\end{frame}
+
+\end{document}
